@@ -21,24 +21,23 @@
   }
   
   #hero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    text-align: center; /* Center the content within the section */
   }
   
-  #hero > div {
-    width: 48%; /* Adjust the width as needed */
+  h2 {
+    margin-bottom: 20px; /* Add some space below the h2 */
   }
   
-  #hero h2 {
-    text-align: center; /* Center the heading */
+  .hero > div {
+    display: inline-block; /* Display divs inline with each other */
+    vertical-align: top; /* Align divs to the top of the line */
+    width: 30%; /* Adjust the width of each div as needed */
+    margin: 0 10px; /* Add some margin between the divs */
   }
   
-  #hero h3 {
-    color: #333; /* Optional: Set the color for job titles */
+  img {
+    display: block; /* Make sure the image is a block element */
+    margin: 0 auto; /* Center the image within its container */
   }
   
-  #hero p {
-    margin-bottom: 10px; /* Optional: Add some space between job title and description */
-  }
   
