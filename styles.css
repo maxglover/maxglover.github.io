@@ -40,6 +40,8 @@
   img {
     display: block; /* Make sure the image is a block element */
     margin: 0 auto; /* Center the image within its container */
+    width: 40%;
+    height: fit-content;
   }
   
   
