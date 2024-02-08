@@ -22,6 +22,8 @@
   
   #hero {
     text-align: center; /* Center the content within the section */
+    display: flex;
+    flex-direction: column;
   }
   
   h2 {
