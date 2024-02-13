@@ -17,6 +17,10 @@
   #experience h3 {
     color: #333; /* Optional: Set the color for job titles */
   }
+
+  #experience li {
+    margin: 0 10px;
+  }
   
   #experience p {
     margin-bottom: 10px; /* Optional: Add some space between job title and description */
