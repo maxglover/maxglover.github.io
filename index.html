@@ -42,20 +42,32 @@
             width: 100%;
         }
 
-        @media (max-width: 768px) {
         #skills ul {
-            flex-direction: column; 
-        }
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
 
-        #skills div {
-            margin: 10px 0; 
-        }
+#skills div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
 
-        #skills img {
-            max-width: 100%; 
-            height: auto;    
-            width:auto
-        }
+#skills img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #skills div {
+        flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
+    }
+
+
 
 }
 
