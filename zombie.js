@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleKeyPress(event) {
         const step = 20; // Adjust the step size as needed
+
+        switch (event.key) {
+            case 'ArrowUp':
+            case 'ArrowDown':
+            case 'ArrowLeft':
+            case 'ArrowRight':
+                event.preventDefault(); // Prevent default arrow key behavior (e.g., scrolling)
+                break;
+        }
     
         switch (event.key) {
             case 'ArrowUp':
