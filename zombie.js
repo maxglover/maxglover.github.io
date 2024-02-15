@@ -10,30 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         posY = Math.max(0, Math.min(window.innerHeight - zombie.clientHeight, posY));
     
         zombie.style.transform = `translate(${posX}px, ${posY}px)`;
-
-        // Check for collision with coins and remove them
-        const coins = document.getElementsByClassName('coin');
-        Array.from(coins).forEach(coin => {
-            if (isOverlap(zombie, coin)) {
-                coinsContainer.removeChild(coin);
-                // You can add any additional logic for scoring or effects here
-            }
-        });
     }
-
-    // Function to check if two elements overlap
-    function isOverlap(element1, element2) {
-        const rect1 = element1.getBoundingClientRect();
-        const rect2 = element2.getBoundingClientRect();
-
-        return (
-            rect1.x < rect2.x + rect2.width &&
-            rect1.x + rect1.width > rect2.x &&
-            rect1.y < rect2.y + rect2.height &&
-            rect1.y + rect1.height > rect2.y
-        );
-    }
-
+    
     function createCoin() {
         const coin = document.createElement('div');
         coin.classList.add('coin');
@@ -42,11 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
         coin.style.left = `${coinX}px`;
         coin.style.top = `${coinY}px`;
         coinsContainer.appendChild(coin);
+    
+        // Add click event to "eat" the coin
+        coin.addEventListener('click', function () {
+            coinsContainer.removeChild(coin);
+            // You can add any additional logic for scoring or effects here
+        });
     }    
 
     function handleKeyPress(event) {
         const step = 20; // Adjust the step size as needed
-
+    
         switch (event.key) {
             case 'ArrowUp':
             case 'ArrowDown':
@@ -55,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault(); // Prevent default arrow key behavior (e.g., scrolling)
                 break;
         }
-    
+
         switch (event.key) {
             case 'ArrowUp':
                 posY = Math.max(posY - step, 0); // Ensure posY doesn't go below 0
@@ -71,8 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
     
+        console.log(`posX: ${posX}, posY: ${posY}, zombie.clientWidth: ${zombie.clientWidth}, zombie.clientHeight: ${zombie.clientHeight}, window.innerWidth: ${window.innerWidth}, window.innerHeight: ${window.innerHeight}`);
+        
         updateZombiePosition();
     }
+    
+    
 
     document.addEventListener('keydown', handleKeyPress);
 
