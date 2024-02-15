@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     function createCoin() {
         const coin = document.createElement('div');
         coin.classList.add('coin');
-        const coinX = Math.random() * window.innerWidth;
-        const coinY = Math.random() * window.innerHeight;
+        const coinX = Math.random() * (window.innerWidth - 30); // Adjust the value based on the coin width
+        const coinY = Math.random() * (window.innerHeight - 30); // Adjust the value based on the coin height
         coin.style.left = `${coinX}px`;
         coin.style.top = `${coinY}px`;
         coinsContainer.appendChild(coin);
-
+    
         // Add click event to "eat" the coin
         coin.addEventListener('click', function () {
             coinsContainer.removeChild(coin);
             // You can add any additional logic for scoring or effects here
         });
-    }
+    }    
 
     function handleKeyPress(event) {
         const step = 20; // Adjust the step size as needed
@@ -42,8 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
     
+        console.log(`posX: ${posX}, posY: ${posY}, zombie.clientWidth: ${zombie.clientWidth}, zombie.clientHeight: ${zombie.clientHeight}, window.innerWidth: ${window.innerWidth}, window.innerHeight: ${window.innerHeight}`);
+        
         updateZombiePosition();
     }
+    
     
 
     document.addEventListener('keydown', handleKeyPress);
