@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const zombie = document.getElementById('zombie');
-    const coinsContainer = document.getElementById('coins-container');
+    const coinsContainer = document.getElementById('zombiesec');
     let posX = 0;
     let posY = 0;
 
