@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'ArrowDown':
                 posY = Math.min(posY + step, window.innerHeight - zombie.clientHeight); // Ensure posY doesn't exceed the window height
                 break;
-            case 'ArrowRight':
-                posX = Math.max(posX - step, 0); // Ensure posX doesn't go below 0
-                break;
             case 'ArrowLeft':
-                posX = Math.min(posX + step, window.innerWidth - zombie.clientWidth); // Ensure posX doesn't exceed the window width
+                posX = Math.max(posX - step, window.innerWidth - zombie.clientWidth); // Ensure posX doesn't go below 0
+                break;
+            case 'ArrowRight':
+                posX = Math.min(posX + step, 0); // Ensure posX doesn't exceed the window width
                 break;
         }
     
