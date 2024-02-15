@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
         switch (event.key) {
             case 'ArrowUp':
+            case 'ArrowDown':
+            case 'ArrowLeft':
+            case 'ArrowRight':
+                event.preventDefault(); // Prevent default arrow key behavior (e.g., scrolling)
+                break;
+        }
+
+        switch (event.key) {
+            case 'ArrowUp':
                 posY = Math.max(posY - step, 0); // Ensure posY doesn't go below 0
                 break;
             case 'ArrowDown':
