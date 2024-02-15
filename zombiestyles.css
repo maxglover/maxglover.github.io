@@ -18,4 +18,11 @@
     from { background-position: 0px; }
     to { background-position: -2000px; }
     }
+    .coin {
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+        position: absolute;
+        cursor: pointer;
+    }
     
