@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let posY = 0;
 
     function updateZombiePosition() {
+        // Ensure the zombie stays within the boundaries
+        posX = Math.max(0, Math.min(window.innerWidth - zombie.clientWidth, posX));
+        posY = Math.max(0, Math.min(window.innerHeight - zombie.clientHeight, posY));
+    
         zombie.style.transform = `translate(${posX}px, ${posY}px)`;
     }
-
+    
     function createCoin() {
         const coin = document.createElement('div');
         coin.classList.add('coin');
