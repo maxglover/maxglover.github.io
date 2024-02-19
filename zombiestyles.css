@@ -24,6 +24,7 @@
         width: 30px;
         height: 30px;
         background-image: url("coin.png");
+        color: gold;
         position: absolute;
     }
     
