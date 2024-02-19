@@ -16,9 +16,14 @@
     margin-left: auto;
     }
     
-    @keyframes plays {
-    from { background-position: 0px; }
-    to { background-position: -2000px; }
+    @keyframes plays-right {
+        from { background-position: 0px 0; }
+        to { background-position: -2000px 0; }
+    }
+    
+    @keyframes plays-left {
+        from { background-position: 0px -312px; }
+        to { background-position: -2000px -312px; }
     }
     .coin {
         width: 30px;

@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
         zombie.style.transform = `translate(${posX}px, ${posY}px)`;
     }
     
+    function updateZombieDirection(direction) {
+        zombie.style.animationName = `plays-${direction}`;
+    }
+
     function createCoin() {
         const coin = document.createElement('div');
         coin.classList.add('coin');
@@ -49,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case 'ArrowLeft':
                 posX = Math.max(posX - step, 0); // Ensure posX doesn't go below 0
+                updateZombieDirection('left');
                 break;
             case 'ArrowRight':
                 posX = Math.min(posX + step, window.innerWidth - zombie.clientWidth); // Ensure posX doesn't exceed the window width
+                updateZombieDirection('right');
                 break;
         }
     
