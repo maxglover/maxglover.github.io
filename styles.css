@@ -75,7 +75,6 @@
 	border-right: 2px;
 	border-left: 0;
 	border-style: solid;
-/* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
 	border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
 }
 .work:last-child {
@@ -90,7 +89,7 @@
   text-align: center;
 }
 
-.mobile-hero-format img{
+.hero-content img{
   flex: 1; 
   max-width: 40%; 
   height: 10%; 
@@ -99,10 +98,6 @@
 
 @media (max-width: 768px) {
   .hero-content {
-      padding: 0 20px; 
-  }
-
-  .mobile-hero-format {
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -110,7 +105,7 @@
       text-align: center;
   }
 
-  .mobile-hero-format img {
+  .hero-content img {
     max-width: 100%;
     height: auto;
     margin: 0 0 20px;
