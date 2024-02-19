@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function updateZombieDirection(direction) {
         zombie.style.animationName = `plays-${direction}`;
+        zombie.style.transform = `scaleX(${direction === 'left' ? -1 : 1})`;
     }
 
     function createCoin() {
