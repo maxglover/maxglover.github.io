@@ -12,7 +12,7 @@
     width: 200px;
     height: 312px;
     background-image: url("walkingdead.png");
-    animation: plays 1.8s steps(10) infinite ;
+    animation: plays-right 1.8s steps(10) infinite ;
     margin-left: auto;
     }
     

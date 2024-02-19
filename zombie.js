@@ -60,8 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 updateZombieDirection('right');
                 break;
         }
-    
-        console.log(`posX: ${posX}, posY: ${posY}, zombie.clientWidth: ${zombie.clientWidth}, zombie.clientHeight: ${zombie.clientHeight}, window.innerWidth: ${window.innerWidth}, window.innerHeight: ${window.innerHeight}`);
         
         updateZombiePosition();
     }
