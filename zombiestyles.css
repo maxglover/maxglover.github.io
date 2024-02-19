@@ -14,7 +14,7 @@
     background-image: url("walkingdead.png");
     animation: plays-left 1.8s steps(10) infinite ;
     margin-left: auto;
-    transform: scaleX(1);
+    transform: scaleX(-1);
     }
     
     @keyframes plays-right {
