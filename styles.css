@@ -83,7 +83,7 @@
 	border-right: 0;
 }
 
-.hero-content{
+.herocontent{
   display: flex; 
   flex-direction: row; 
   justify-content: center; 
@@ -91,7 +91,7 @@
   text-align: center;
 }
 
-.hero-content img{
+.herocontent img{
   flex: 1; 
   max-width: 40%; 
   height: 10%; 
@@ -99,7 +99,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero-content {
+  .herocontent {
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -107,7 +107,7 @@
       text-align: center;
   }
 
-  .hero-content img {
+  .herocontent img {
     max-width: 100%;
     height: auto;
     margin: 0 0 20px;
